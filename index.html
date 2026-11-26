@@ -9,7 +9,7 @@
      this file. Put your WhatsApp number (digits only, with country code)
      and/or email there. Leave empty to hide the buttons.
   3. Colors: change the values at the top of the <style> block (--accent etc).
-  4. Pictures: replace food.jpg, decor.jpg and perfume.jpg (same names).
+  4. Pictures live in images.js (stored as text). To change them, ask for a new images.js.
   Search for the word EDIT to find places meant for you.
 =====================================================================
 -->
@@ -21,7 +21,7 @@
 <meta name="description" content="Short CGI product videos for brands in Egypt and the Gulf. Concept first, then you decide. | فيديوهات CGI قصيرة لمنتجات الشركات في مصر والخليج.">
 <meta property="og:title" content="AI CGI Product Ads | إعلانات CGI للمنتجات">
 <meta property="og:description" content="Short CGI product videos for brands in Egypt and the Gulf. Concept first, then you decide.">
-<meta property="og:image" content="./food.jpg">
+
 <meta name="theme-color" content="#0e1116">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,7 +183,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
       </div>
     </div>
     <div class="hero-img">
-      <img src="./perfume.jpg" width="1000" height="750" alt="AI concept illustration: a glass perfume bottle in smoke and golden liquid" fetchpriority="high">
+      <img data-img="perfume" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1000" height="750" alt="AI concept illustration: a glass perfume bottle in smoke and golden liquid" fetchpriority="high">
       <span class="badge"><span class="en">AI concept illustration</span><span class="ar">صورة توضيحية بالذكاء الاصطناعي</span></span>
     </div>
   </div>
@@ -225,7 +225,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <div class="cards">
       <!-- EDIT: each article is one sample concept -->
       <article class="card sample">
-        <img src="./food.jpg" width="1000" height="750" loading="lazy" alt="AI concept: dates, milk splash, cardamom and honey around a chocolate truffle">
+        <img data-img="food" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1000" height="750" loading="lazy" alt="AI concept: dates, milk splash, cardamom and honey around a chocolate truffle">
         <div class="body">
           <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
           <h3><span class="en">Food and gifts</span><span class="ar">الأكل والهدايا</span></h3>
@@ -239,7 +239,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         </div>
       </article>
       <article class="card sample">
-        <img src="./decor.jpg" width="1000" height="750" loading="lazy" alt="AI concept: armchair, rug and side table floating into place in a living room">
+        <img data-img="decor" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1000" height="750" loading="lazy" alt="AI concept: armchair, rug and side table floating into place in a living room">
         <div class="body">
           <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
           <h3><span class="en">Home and furniture</span><span class="ar">البيت والأثاث</span></h3>
@@ -253,7 +253,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         </div>
       </article>
       <article class="card sample">
-        <img src="./perfume.jpg" width="1000" height="750" loading="lazy" alt="AI concept: a glass perfume bottle in smoke and golden liquid">
+        <img data-img="perfume" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1000" height="750" loading="lazy" alt="AI concept: a glass perfume bottle in smoke and golden liquid">
         <div class="body">
           <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
           <h3><span class="en">Perfume and beauty</span><span class="ar">العطور والجمال</span></h3>
@@ -372,6 +372,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   </div>
 </footer>
 
+<script src="images.js"></script>
 <script>
 /* ============ SETTINGS (EDIT) ============
    Put your contact here. Leave "" to hide a button.
