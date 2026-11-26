@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--
+=====================================================================
+  HOW TO EDIT THIS PAGE (single file: index.html)
+  1. Every text has TWO versions side by side:
+       <span class="en">English text</span><span class="ar">النص العربي</span>
+     Change the words inside the spans. Keep both spans.
+  2. Contact buttons: scroll to the "SETTINGS" script at the bottom of
+     this file. Put your WhatsApp number (digits only, with country code)
+     and/or email there. Leave empty to hide the buttons.
+  3. Colors: change the values at the top of the <style> block (--accent etc).
+  4. Pictures: replace food.jpg, decor.jpg and perfume.jpg (same names).
+  Search for the word EDIT to find places meant for you.
+=====================================================================
+-->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI CGI Product Ads | إعلانات CGI للمنتجات</title>
+<meta name="description" content="Short CGI product videos for brands in Egypt and the Gulf. Concept first, then you decide. | فيديوهات CGI قصيرة لمنتجات الشركات في مصر والخليج.">
+<meta property="og:title" content="AI CGI Product Ads | إعلانات CGI للمنتجات">
+<meta property="og:description" content="Short CGI product videos for brands in Egypt and the Gulf. Concept first, then you decide.">
+<meta property="og:image" content="./food.jpg">
+<meta name="theme-color" content="#0e1116">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* EDIT: colors */
+:root{
+  --bg:#0e1116; --bg2:#151a22; --card:#1a2029; --line:#2a323f;
+  --text:#eef1f5; --muted:#a9b2bf; --accent:#e8b04a; --accent2:#f4d28a; --onaccent:#1a1305;
+  --radius:16px; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;line-height:1.65;font-size:17px;-webkit-text-size-adjust:100%}
+html[lang=ar] body{font-family:Cairo,"Segoe UI",Tahoma,system-ui,sans-serif;line-height:1.85}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+/* language switching: only the active language is shown */
+html[lang=en] .ar{display:none!important}
+html[lang=ar] .en{display:none!important}
+
+/* header / nav */
+header{position:sticky;top:0;z-index:50;background:rgba(14,17,22,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:800;letter-spacing:.2px;text-decoration:none;font-size:1.05rem;white-space:nowrap}
+.logo b{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-size:.95rem;padding:8px 2px}
+nav a:hover,nav a:focus-visible{color:var(--text)}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:7px 14px;font:inherit;font-size:.9rem;cursor:pointer;min-height:40px}
+.lang:hover{border-color:var(--accent)}
+.burger{display:none;background:transparent;border:1px solid var(--line);color:var(--text);border-radius:10px;width:44px;height:40px;cursor:pointer;font-size:1.2rem;line-height:1}
+@media(max-width:820px){
+  .burger{display:inline-block}
+  nav{position:absolute;inset-inline:0;top:64px;background:var(--bg2);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 16px}
+  nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+}
+
+/* hero */
+.hero{padding:64px 0 56px;background:radial-gradient(900px 420px at 80% -10%,rgba(232,176,74,.16),transparent 60%),var(--bg)}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-block;border:1px solid var(--line);background:var(--bg2);color:var(--accent2);border-radius:999px;padding:5px 14px;font-size:.85rem;margin-bottom:18px}
+h1{font-size:clamp(2rem,5.6vw,3.4rem);line-height:1.15;font-weight:800;margin-bottom:18px}
+html[lang=ar] h1{line-height:1.4}
+.lead{color:var(--muted);font-size:1.12rem;max-width:34em;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.primary{background:var(--accent);color:var(--onaccent)}
+.btn.primary:hover{background:var(--accent2)}
+.btn.ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn.ghost:hover{border-color:var(--accent)}
+.hero-img{position:relative}
+.hero-img img{border-radius:var(--radius);border:1px solid var(--line);aspect-ratio:4/3;object-fit:cover;width:100%}
+.badge{position:absolute;top:12px;inset-inline-start:12px;background:rgba(14,17,22,.85);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.78rem;color:var(--accent2)}
+@media(max-width:820px){.hero{padding:40px 0 36px}.hero .grid{grid-template-columns:1fr;gap:28px}}
+
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--bg2)}
+.eyebrow{color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+html[lang=ar] .eyebrow{letter-spacing:0;font-size:.95rem}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.25;margin-bottom:12px;font-weight:800}
+.sub{color:var(--muted);max-width:42em;margin-bottom:36px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.98rem}
+.ico{width:44px;height:44px;border-radius:12px;background:rgba(232,176,74,.14);color:var(--accent);display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px}
+@media(max-width:820px){section{padding:52px 0}.cards{grid-template-columns:1fr}}
+
+/* samples */
+.sample{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.sample img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--bg2)}
+.sample .body{padding:20px 22px 24px}
+.sample .badge{position:static;display:inline-block;margin-bottom:10px}
+.sample ol{margin-top:10px;padding-inline-start:1.3em;color:var(--muted);font-size:.93rem}
+.sample ol li{margin-bottom:4px}
+.sample h4{font-size:.8rem;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;margin-top:12px}
+html[lang=ar] .sample h4{letter-spacing:0;font-size:.9rem}
+.note-line{margin-top:22px;color:var(--muted);font-size:.92rem}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;counter-reset:s}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--onaccent);font-weight:800;margin-bottom:14px}
+.steps h3{font-size:1.05rem;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:.95rem}
+@media(max-width:980px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* packages */
+.pack{position:relative}
+.pack h3{font-size:1.3rem}
+.pack .price{margin:10px 0 14px;color:var(--accent2);font-weight:700;font-size:.98rem}
+.pack ul{list-style:none;color:var(--muted);font-size:.95rem}
+.pack li{padding:7px 0;border-top:1px solid var(--line)}
+.pack li::before{content:"✓";color:var(--accent);margin-inline-end:8px}
+
+/* honest + cta */
+.honest{border:1px solid var(--accent);background:rgba(232,176,74,.07);border-radius:var(--radius);padding:28px;max-width:820px}
+.honest h2{font-size:1.4rem}
+.cta-box{background:linear-gradient(135deg,#1c2330,#161b24);border:1px solid var(--line);border-radius:22px;padding:40px 28px;text-align:center}
+.cta-box p{color:var(--muted);max-width:36em;margin:0 auto 22px}
+.brief{margin:26px auto 0;max-width:560px;text-align:start;background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:16px 18px;font-size:.93rem;color:var(--muted)}
+.brief b{color:var(--text)}
+.brief ul{padding-inline-start:1.2em;margin:6px 0 12px}
+.copied{color:var(--accent2);font-size:.9rem;margin-top:8px;min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hide{display:none!important}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><b>AI</b> CGI <span class="en">Product Ads</span><span class="ar">إعلانات المنتجات</span></a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#services"><span class="en">Services</span><span class="ar">الخدمات</span></a></li>
+        <li><a href="#samples"><span class="en">Samples</span><span class="ar">النماذج</span></a></li>
+        <li><a href="#how"><span class="en">How it works</span><span class="ar">طريقة العمل</span></a></li>
+        <li><a href="#packages"><span class="en">Packages</span><span class="ar">الباقات</span></a></li>
+        <li><a href="#about"><span class="en">About</span><span class="ar">من نحن</span></a></li>
+        <li><a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <button class="lang" id="langBtn" type="button" aria-label="Switch language / تغيير اللغة"><span class="en">العربية</span><span class="ar">English</span></button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="tag"><span class="en">New studio · Egypt &amp; the Gulf</span><span class="ar">استوديو جديد · مصر والخليج</span></span>
+      <h1>
+        <span class="en">Short CGI product ads that make your product the star</span>
+        <span class="ar">إعلانات CGI قصيرة تخلّي منتجك هو البطل</span>
+      </h1>
+      <p class="lead">
+        <span class="en">We make 10 to 30 second CGI product videos for social media, in Arabic or English. Before anything is produced, you see a concept for one of your products.</span>
+        <span class="ar">بنصنع فيديوهات CGI للمنتجات من 10 لـ 30 ثانية للسوشيال ميديا، بالعربي أو الإنجليزي. قبل أي إنتاج، بتشوف فكرة مقترحة لواحد من منتجاتك.</span>
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#contact"><span class="en">Start with a brief</span><span class="ar">ابدأ ببريف قصير</span></a>
+        <a class="btn ghost" href="#samples"><span class="en">See sample concepts</span><span class="ar">شوف النماذج</span></a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="./perfume.jpg" width="1000" height="750" alt="AI concept illustration: a glass perfume bottle in smoke and golden liquid" fetchpriority="high">
+      <span class="badge"><span class="en">AI concept illustration</span><span class="ar">صورة توضيحية بالذكاء الاصطناعي</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Services</span><span class="ar">الخدمات</span></div>
+    <h2><span class="en">What we make</span><span class="ar">اللي بنعمله</span></h2>
+    <p class="sub"><span class="en">Focused on one thing: short, polished product videos for social media.</span><span class="ar">تركيزنا على حاجة واحدة: فيديوهات منتجات قصيرة وشيك للسوشيال ميديا.</span></p>
+    <div class="cards">
+      <!-- EDIT: each .card is one service -->
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></div>
+        <h3><span class="en">Product ads</span><span class="ar">إعلانات منتجات</span></h3>
+        <p><span class="en">Your product as the hero: macro shots, splashes, particles and slow motion.</span><span class="ar">المنتج هو البطل: لقطات ماكرو وسوائل وجزيئات وحركة بطيئة.</span></p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><circle cx="12" cy="18" r=".8" fill="currentColor"/></svg></div>
+        <h3><span class="en">Social formats</span><span class="ar">مقاسات السوشيال</span></h3>
+        <p><span class="en">Vertical 9:16 for Reels, TikTok and Shorts, plus other sizes on request.</span><span class="ar">طولي 9:16 للريلز وتيك توك والشورتس، ومقاسات تانية عند الطلب.</span></p>
+      </div>
+      <div class="card">
+        <div class="ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19"/></svg></div>
+        <h3><span class="en">In your language</span><span class="ar">بلغتك</span></h3>
+        <p><span class="en">Arabic or English voiceover and on-screen text.</span><span class="ar">تعليق صوتي ونصوص على الشاشة بالعربي أو الإنجليزي.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLES ============ -->
+<section id="samples" class="alt">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Samples</span><span class="ar">النماذج</span></div>
+    <h2><span class="en">Sample concepts</span><span class="ar">أفكار نموذجية</span></h2>
+    <p class="sub"><span class="en">These are concept illustrations made by AI to show the look we aim for. They are not client work and not finished videos.</span><span class="ar">دي صور توضيحية اتعملت بالذكاء الاصطناعي عشان تبين الشكل اللي بنستهدفه. مش شغل عملاء ومش فيديوهات نهائية.</span></p>
+    <div class="cards">
+      <!-- EDIT: each article is one sample concept -->
+      <article class="card sample">
+        <img src="./food.jpg" width="1000" height="750" loading="lazy" alt="AI concept: dates, milk splash, cardamom and honey around a chocolate truffle">
+        <div class="body">
+          <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
+          <h3><span class="en">Food and gifts</span><span class="ar">الأكل والهدايا</span></h3>
+          <h4><span class="en">Storyboard idea</span><span class="ar">فكرة الستوري بورد</span></h4>
+          <ol>
+            <li><span class="en">Ingredients fall in slow motion</span><span class="ar">مكونات بتنزل بحركة بطيئة</span></li>
+            <li><span class="en">They merge into the product</span><span class="ar">بتتجمع في المنتج</span></li>
+            <li><span class="en">The gift box assembles around it</span><span class="ar">علبة الهدية بتتركب حوله</span></li>
+            <li><span class="en">Packshot with your offer and a call to action</span><span class="ar">لقطة المنتج مع عرضك ودعوة للشراء</span></li>
+          </ol>
+        </div>
+      </article>
+      <article class="card sample">
+        <img src="./decor.jpg" width="1000" height="750" loading="lazy" alt="AI concept: armchair, rug and side table floating into place in a living room">
+        <div class="body">
+          <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
+          <h3><span class="en">Home and furniture</span><span class="ar">البيت والأثاث</span></h3>
+          <h4><span class="en">Storyboard idea</span><span class="ar">فكرة الستوري بورد</span></h4>
+          <ol>
+            <li><span class="en">An empty room</span><span class="ar">غرفة فاضية</span></li>
+            <li><span class="en">Pieces float in and click into place</span><span class="ar">القطع بتطفو وتتركب في مكانها</span></li>
+            <li><span class="en">Camera pulls back to the full room</span><span class="ar">الكاميرا بتبعد وتكشف الغرفة كاملة</span></li>
+            <li><span class="en">Packshot with your offer</span><span class="ar">لقطة المنتج مع عرضك</span></li>
+          </ol>
+        </div>
+      </article>
+      <article class="card sample">
+        <img src="./perfume.jpg" width="1000" height="750" loading="lazy" alt="AI concept: a glass perfume bottle in smoke and golden liquid">
+        <div class="body">
+          <span class="badge"><span class="en">Concept, not client work</span><span class="ar">فكرة، مش شغل عميل</span></span>
+          <h3><span class="en">Perfume and beauty</span><span class="ar">العطور والجمال</span></h3>
+          <h4><span class="en">Storyboard idea</span><span class="ar">فكرة الستوري بورد</span></h4>
+          <ol>
+            <li><span class="en">Smoke and wood fibres in the dark</span><span class="ar">دخان وألياف خشب في الظلام</span></li>
+            <li><span class="en">They turn into liquid gold</span><span class="ar">بتتحول لسائل ذهبي</span></li>
+            <li><span class="en">The bottle appears in rim light</span><span class="ar">الزجاجة بتظهر بإضاءة جانبية</span></li>
+            <li><span class="en">Name, price and where to buy</span><span class="ar">الاسم والسعر ومكان الشراء</span></li>
+          </ol>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Process</span><span class="ar">العملية</span></div>
+    <h2><span class="en">How it works</span><span class="ar">إزاي بنشتغل</span></h2>
+    <p class="sub"><span class="en">Four steps. You approve the idea before any production starts.</span><span class="ar">أربع خطوات. بتوافق على الفكرة قبل ما أي إنتاج يبدأ.</span></p>
+    <ol class="steps">
+      <li><h3><span class="en">Brief</span><span class="ar">البريف</span></h3><p><span class="en">You send a short brief: the product, the goal, the audience.</span><span class="ar">ترسل لنا بريف قصير: المنتج والهدف والجمهور.</span></p></li>
+      <li><h3><span class="en">Concept</span><span class="ar">الفكرة</span></h3><p><span class="en">We prepare a concept and storyboard for you to approve.</span><span class="ar">نجهز فكرة وستوري بورد وتوافق عليها.</span></p></li>
+      <li><h3><span class="en">Draft</span><span class="ar">النسخة الأولية</span></h3><p><span class="en">We produce the draft video and send it to you.</span><span class="ar">ننتج نسخة أولية من الفيديو ونبعتها لك.</span></p></li>
+      <li><h3><span class="en">Delivery</span><span class="ar">التسليم</span></h3><p><span class="en">You request revisions. We deliver the final files.</span><span class="ar">تطلب التعديلات ونسلمك الملفات النهائية.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section id="packages" class="alt">
+  <div class="wrap">
+    <div class="eyebrow"><span class="en">Packages</span><span class="ar">الباقات</span></div>
+    <h2><span class="en">Three ways to start</span><span class="ar">تلات طرق تبدأ بيها</span></h2>
+    <p class="sub"><span class="en">No fixed prices yet. Prices depend on scenes, length and complexity, and we quote after a short brief.</span><span class="ar">مفيش أسعار ثابتة لسه. السعر بيعتمد على عدد المشاهد والمدة والتعقيد، وبنحدده بعد بريف قصير.</span></p>
+    <div class="cards">
+      <!-- EDIT: when you decide real prices, put them in the .price line -->
+      <div class="card pack">
+        <h3><span class="en">Economy</span><span class="ar">اقتصادية</span></h3>
+        <div class="price"><span class="en">Quoted after the brief</span><span class="ar">السعر بعد البريف</span></div>
+        <ul>
+          <li><span class="en">One simple ad</span><span class="ar">إعلان بسيط واحد</span></li>
+          <li><span class="en">Few scenes</span><span class="ar">مشاهد قليلة</span></li>
+          <li><span class="en">Limited revisions</span><span class="ar">تعديلات محدودة</span></li>
+        </ul>
+      </div>
+      <div class="card pack">
+        <h3><span class="en">Professional</span><span class="ar">احترافية</span></h3>
+        <div class="price"><span class="en">Quoted after the brief</span><span class="ar">السعر بعد البريف</span></div>
+        <ul>
+          <li><span class="en">Several scenes</span><span class="ar">عدة مشاهد</span></li>
+          <li><span class="en">A fuller story</span><span class="ar">قصة أكمل</span></li>
+          <li><span class="en">More revisions</span><span class="ar">تعديلات أكتر</span></li>
+        </ul>
+      </div>
+      <div class="card pack">
+        <h3><span class="en">Premium</span><span class="ar">بريميوم</span></h3>
+        <div class="price"><span class="en">Quoted after the brief</span><span class="ar">السعر بعد البريف</span></div>
+        <ul>
+          <li><span class="en">Advanced creative work</span><span class="ar">عمل إبداعي متقدم</span></li>
+          <li><span class="en">Several versions</span><span class="ar">عدة نسخ</span></li>
+          <li><span class="en">Several sizes</span><span class="ar">عدة مقاسات</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HONEST NOTE ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="honest">
+      <h2><span class="en">A new studio, said honestly</span><span class="ar">استوديو جديد، وبنقولها بصراحة</span></h2>
+      <p>
+        <span class="en">We are new. We do not have client results to show yet, so this page only shows concepts. We do not promise sales numbers. What we promise is that you see the idea and approve it before we produce anything.</span>
+        <span class="ar">إحنا جداد. مفيش عندنا نتائج عملاء نعرضها لسه، فالصفحة دي فيها أفكار فقط. ومبنوعدش بأرقام مبيعات. اللي بنوعد بيه إنك تشوف الفكرة وتوافق عليها قبل ما ننتج أي حاجة.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / CTA ============ -->
+<section id="contact" class="alt">
+  <div class="wrap">
+    <div class="cta-box">
+      <h2><span class="en">Ready to see a concept for your product?</span><span class="ar">جاهز تشوف فكرة لمنتجك؟</span></h2>
+      <p id="ctaText">
+        <span class="en">Reply to the message that brought you here with the product you would like to start with. A short brief is enough.</span>
+        <span class="ar">ردّ على الرسالة اللي وصلتك منها بالمنتج اللي تحب نبدأ بيه. بريف قصير يكفي.</span>
+      </p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn primary hide" id="waBtn" href="#"><span class="en">Message on WhatsApp</span><span class="ar">كلمنا على واتساب</span></a>
+        <a class="btn primary hide" id="mailBtn" href="#"><span class="en">Send an email</span><span class="ar">ابعت إيميل</span></a>
+        <button class="btn ghost" id="copyBtn" type="button"><span class="en">Copy the brief template</span><span class="ar">انسخ نموذج البريف</span></button>
+      </div>
+      <div class="copied" id="copied" role="status" aria-live="polite"></div>
+      <div class="brief">
+        <b><span class="en">A short brief can include:</span><span class="ar">البريف القصير ممكن يشمل:</span></b>
+        <ul>
+          <li><span class="en">The product and its name</span><span class="ar">المنتج واسمه</span></li>
+          <li><span class="en">The goal (launch, offer, season)</span><span class="ar">الهدف (إطلاق، عرض، موسم)</span></li>
+          <li><span class="en">Who it is for, and where it will run</span><span class="ar">الجمهور والمنصة اللي هينزل عليها</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="en">AI CGI Product Ads · Egypt &amp; the Gulf</span><span class="ar">إعلانات CGI للمنتجات · مصر والخليج</span></div>
+    <div><span class="en">Concept illustrations are AI generated and are not real client campaigns.</span><span class="ar">الصور التوضيحية متولدة بالذكاء الاصطناعي وليست حملات عملاء حقيقية.</span></div>
+  </div>
+</footer>
+
+<script>
+/* ============ SETTINGS (EDIT) ============
+   Put your contact here. Leave "" to hide a button.
+   whatsapp: digits only with country code, e.g. "201001234567"
+   email:    e.g. "name@example.com"
+   Nothing is shown publicly until you fill these in. */
+var SETTINGS = {
+  whatsapp: "",
+  email: "",
+  defaultLang: "en"   // "en" or "ar"
+};
+
+/* ---- below this line you do not need to change anything ---- */
+(function(){
+  var html=document.documentElement, nav=document.getElementById('nav'), burger=document.getElementById('burger');
+  var BRIEF={
+    en:"Hi, I would like to see a CGI concept for my product.\nProduct and name:\nGoal (launch / offer / season):\nAudience and platform:",
+    ar:"أهلاً، حابب أشوف فكرة CGI لمنتجي.\nالمنتج واسمه:\nالهدف (إطلاق / عرض / موسم):\nالجمهور والمنصة:"
+  };
+  function setLang(l){
+    html.lang=l; html.dir=(l==='ar'?'rtl':'ltr');
+    try{localStorage.setItem('lang',l)}catch(e){}
+    updateLinks();
+  }
+  function updateLinks(){
+    var l=html.lang, msg=encodeURIComponent(BRIEF[l]);
+    var wa=document.getElementById('waBtn'), ml=document.getElementById('mailBtn');
+    if(SETTINGS.whatsapp){wa.href='https://wa.me/'+SETTINGS.whatsapp+'?text='+msg;wa.classList.remove('hide')}
+    if(SETTINGS.email){ml.href='mailto:'+SETTINGS.email+'?subject='+encodeURIComponent(l==='ar'?'طلب فكرة CGI':'CGI concept request')+'&body='+msg;ml.classList.remove('hide')}
+  }
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  var q=(location.search.match(/lang=(en|ar)/)||[])[1];
+  setLang(q||saved||SETTINGS.defaultLang||'en');
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(html.lang==='en'?'ar':'en')});
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');burger.setAttribute('aria-expanded','false')}});
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var t=BRIEF[html.lang], c=document.getElementById('copied');
+    var done=function(){c.textContent=html.lang==='ar'?'تم النسخ':'Copied'};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){c.textContent=t})}
+    else{c.textContent=t}
+  });
+})();
+</script>
+</body>
+</html>
